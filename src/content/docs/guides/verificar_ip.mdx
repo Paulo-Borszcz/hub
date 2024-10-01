@@ -1,0 +1,58 @@
+---
+title: Verificar IP
+description: Guia para realizar o reset da Senha AD.
+lastUpdated: 2024-07-08
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+## Introdução
+
+Obter o endereço IP de uma máquina é uma tarefa comum, especialmente em ambientes de rede. O endereço IP é um identificador único para cada dispositivo em uma rede e pode ser necessário para várias tarefas, como solucionar problemas de rede, configurar dispositivos ou realizar acesso remoto. Neste tutorial, vamos mostrar como obter o endereço IP de máquinas que utilizam os sistemas operacionais Linux e Windows utilizando comandos no terminal (cmd).
+
+## Passo a Passo
+
+<Tabs>
+
+<TabItem label="Linux" icon="linux">
+No Linux, você pode usar o comando `ifconfig` ou `ip a` para obter o endereço IP da sua máquina. Aqui estão as instruções para ambos os comandos.
+
+### Usando `ifconfig`
+
+1. **Abra o Terminal**:
+   - Você pode abrir o terminal procurando por "Terminal" no seu menu de aplicações ou usando o atalho de teclado `Ctrl+Alt+T`.
+
+2. **Execute o Comando `ifconfig`**:
+   - Digite `ifconfig` e pressione `Enter`.
+
+   ```sh
+   ifconfig
+   ```
+3. **Encontre o Endereço IP**:
+
+    Procure pela seção que corresponde à sua interface de rede (geralmente chamada de wlan0).
+    O endereço IP estará listado na linha que começa com inet, por exemplo, inet 192.168.1.5.
+
+</TabItem>
+<TabItem label="Windows" icon="seti:windows">
+
+No Windows, você pode usar o comando ipconfig para obter o endereço IP da sua máquina. Aqui estão as instruções para usar o comando ipconfig.
+### Usando ipconfig
+
+   1. **Abrir o Prompt de Comando:**
+        Você pode abrir o terminal procurando por "Prompt de Comando" no seu menu de aplicações ou usando o atalho de teclado Win + R, digitando cmd e pressionando Enter.
+
+   2. **Execute o Comando ipconfig:**
+        Digite ipconfig e pressione Enter.
+        ``` sh
+
+         ipconfig
+
+         ```
+
+    3. **Encontre o Endereço IP:**
+        O endereço IP estará listado na linha que começa com "*Endereço IPv4*", por exemplo, `Endereço IPv4. . . . . . . . . . . . . . . : 192.168.1.5`.
+
+</TabItem>
+
+</Tabs>

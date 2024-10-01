@@ -6,7 +6,7 @@ Siga os passos abaixo para instalar e configurar o projeto:
 
 1. **Clone o repositório:**
       ```sh
-      git clone https://github.com/seu-usuario/MMHub.git
+      https://github.com/lojasmm/mmhub.git
       cd MMHub
       ```
 

@@ -33,7 +33,7 @@ export const ROUTES = [
 ];
 
 export const page_routes = ROUTES.map(({ href, items }) => {
-  return items.map((link) => {
+  return items.map(link => {
     return {
       title: link.title,
       href: href + link.href,

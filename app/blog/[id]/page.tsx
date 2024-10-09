@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { CalendarIcon, UserIcon } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import React from 'react'
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const post = await getPostById(params.id)

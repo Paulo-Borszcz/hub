@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nexus.lojasmm.com.br"),
   description:
     "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+    openGraph: {
+      title: 'MMHub: Sua Central de Documentação e Recursos',
+      description: 'Explore, aprenda e aplique processos de maneira simplificada. Transforme a rotina da sua filial com acesso rápido e fácil a tudo que você precisa sobre TI.',
+      images: [
+        {
+          url: 'https://i.ibb.co/Gn1XB5D/Frame-2.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'MMHub Preview',
+        },
+      ],
+      url: 'https://http://10.102.13.122:3000/',
+      siteName: 'MMHub',
+      locale: 'pt_BR',
+      type: 'website',
+    }
+
 };
 
 export default function RootLayout({
@@ -19,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} font-regular`}
         suppressHydrationWarning

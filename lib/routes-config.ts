@@ -1,10 +1,12 @@
+import { title } from "process";
+
 // for page navigation & to sort on leftbar
 export const ROUTES = [
   {
     title: "Bem vindo ao MMHub",
     href: "apresentacao",
     items: [
-      { title: "Introdução", href: "/introduction" },
+      { title: "Introdução", href: "/introducao" },
     ],
   },
   {
@@ -14,6 +16,8 @@ export const ROUTES = [
       { title: "Impressora Sabium", href: "/impressora-sabium" },
       { title: "Rádio MM", href: "/radiomm" },
       { title: "Verificar IP", href: "/verificar-ip" },
+      { title: "Limpeza de Cache", href: "/limpeza-de-cache" },
+      { title: "Alterar Senha AD", href: "/resetar-senha-ad"},
     ],
   },
   {

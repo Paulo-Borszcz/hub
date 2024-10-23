@@ -4,6 +4,7 @@ import PostList from '@/components/blog/PostList'
 import { Post } from '@/lib/models/Post'
 import { Author } from '@/lib/models/Author'
 import { ObjectId } from 'mongodb'
+import { PostSkeleton } from '@/components/blog/PostSkeleton'
 
 export const metadata = {
   title: 'Blog',
@@ -35,9 +36,19 @@ export default async function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <Suspense fallback={<div>Carregando posts...</div>}>
+      <Suspense fallback={<PostListSkeleton />}>
         <PostListWrapper />
       </Suspense>
+    </div>
+  )
+}
+
+function PostListSkeleton() {
+  return (
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {Array(6).fill(0).map((_, index) => (
+        <PostSkeleton key={index} />
+      ))}
     </div>
   )
 }

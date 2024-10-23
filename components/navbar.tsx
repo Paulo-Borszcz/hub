@@ -7,6 +7,7 @@ import Anchor from "./anchor";
 import { SheetLeftbar } from "./leftbar";
 import { page_routes } from "@/lib/routes-config";
 import { SheetClose } from "@/components/ui/sheet";
+import { Badge } from "@/components/ui/badge";
 
 export const NAVLINKS = [
   {
@@ -16,6 +17,11 @@ export const NAVLINKS = [
   {
     title: "Blog",
     href: "/blog",
+  },
+  {
+    title: "Soph.IA",
+    href: "/sophia",
+    beta: true,
   },
 ];
 
@@ -67,8 +73,14 @@ export function NavMenu({ isSheet = false }) {
             activeClassName="text-black dark:text-white font-semibold"
             absolute
             href={item.href}
+            className="flex items-center gap-2"
           >
             {item.title}
+            {item.beta && (
+              <Badge variant="secondary" className="text-xs font-normal">
+                Beta
+              </Badge>
+            )}
           </Anchor>
         );
         return isSheet ? (

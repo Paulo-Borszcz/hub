@@ -22,7 +22,7 @@ export const metadata: Metadata = {
           alt: 'MMHub Preview',
         },
       ],
-      url: 'https://http://10.102.13.122:3000/',
+      url: 'http://10.102.13.122:3000/',
       siteName: 'MMHub',
       locale: 'pt_BR',
       type: 'website',
